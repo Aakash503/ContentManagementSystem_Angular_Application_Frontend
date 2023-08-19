@@ -1,0 +1,20 @@
+.login-container{
+
+    background-color: royalblue;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+}
+
+.loginfield{
+
+    margin-top: 0px;
+    text-justify: auto;
+    font-size: larger;
+    padding: 5px;
+}
+.loginshift
+{
+    float: right;
+    /* margin-left: 10px; */
+}

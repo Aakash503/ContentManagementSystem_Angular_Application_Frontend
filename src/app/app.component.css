@@ -1,0 +1,32 @@
+/* .head{
+    background-color: rgb(51, 147, 230);
+    padding-left: 40px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    
+}
+.logo{
+    color: rgb(16, 16, 15);
+    
+} */
+
+
+.head{
+    background-color: rgb(51, 147, 230);
+    padding-left: 40px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.logo{
+    color: rgb(16, 16, 15);
+    text-transform: uppercase;
+    text-decoration-style: solid;
+}

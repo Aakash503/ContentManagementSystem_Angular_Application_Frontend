@@ -1,0 +1,22 @@
+.card-container
+{
+    margin-top: 10px;
+    
+}
+
+.card-block
+{
+    background-color: royalblue;
+}
+.delbutton
+{
+    float: right;
+    margin-left: 700px;
+    background-color: burlywood;
+}
+
+/* .searchdiv
+{
+    float: right;
+    margin-left:300px ;
+} */

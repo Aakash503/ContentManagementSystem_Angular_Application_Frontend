@@ -1,0 +1,37 @@
+<p>viewalluser works!</p>
+<h1>user details </h1>
+<!-- <h3> -->
+    <!-- {{user.username}} <br>
+    {{user.firstname}} <br>
+    {{user.lastname}}<br>
+    {{user.email}}<br>
+    {{user.phoneno}}<br>
+    {{user.password}}<br> -->
+
+    <!-- <div *ngFor="let i of user">
+        <h3>username - {{i.username}}</h3>
+        <p>firstname - {{i.firstname}}</p>
+        <p>lastname - {{i.lastname}}</p>
+        <p>email- {{i.email}}</p>
+        <p>phoneno- {{i.mobileno}}</p>
+        <p>password- {{i.password}}</p>
+        </div><br><br> -->
+<!-- </h3> -->
+<div class="card-container" *ngFor="let i of user">
+<mat-card class="card-block">
+    <mat-card-header>
+      <mat-card-title>username - {{i.username}}</mat-card-title>
+      <mat-card-title>firstname - {{i.firstname}}</mat-card-title>
+      <mat-card-title>lastname - {{i.lastname}}</mat-card-title>
+      <mat-card-title>email - {{i.email}}</mat-card-title>
+      <mat-card-title>phoneno - {{i.mobileno}}</mat-card-title>
+      <mat-card-title>password - {{i.password}}</mat-card-title>
+      <!-- <mat-card-subtitle>Start</mat-card-subtitle> -->
+      <mat-card-actions>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <button mat-button id="del">DELETE</button> -->
+      </mat-card-actions>
+    </mat-card-header>
+    
+  </mat-card>
+  </div>

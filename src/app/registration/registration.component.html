@@ -1,0 +1,122 @@
+
+<h2>
+  <div class="registration-container">
+    <form  [formGroup]="registrationForm" (submit)="onRegister();registrationForm.reset();">
+    <div><label > Enter username : </label></div>  
+    <div>        
+    <mat-form-field class="registration field" appearance="fill">        
+        <input matInput placeholder="Enter UserName" type="text" [(ngModel)]="user.username" name="username" formControlName="username">
+        <mat-error *ngIf="username?.errors?.required">
+            username is required.
+        </mat-error>
+        <mat-error *ngIf="username?.errors?.maxlength">
+            username can not be more than 15 characters.
+        </mat-error>
+        <mat-error *ngIf="username?.errors?.minlength">
+            minimum 4 characters are required.
+        </mat-error>
+        <mat-error *ngIf="username?.errors?.pattern">
+            username must contain with alphabetic letters and numeric digits.
+        </mat-error>
+
+    </mat-form-field>
+    </div>
+
+    <span><label > Enter First Name : </label></span>
+    <div>        
+    <mat-form-field class="registration field" appearance="fill">
+        <input matInput placeholder="Enter First name" type="text" [(ngModel)]="user.firstname" name="firstname1" formControlName="firstname">
+        <mat-error *ngIf="firstname?.errors?.required">
+            First Name is required.
+        </mat-error>
+        <mat-error *ngIf="firstname?.errors?.maxlength">
+            First Name can not exceed 12 characters 
+        </mat-error>
+       
+        <mat-error *ngIf="firstname?.errors?.pattern">
+            First Name must contain letters
+        </mat-error>
+       
+    </mat-form-field>
+    </div>
+
+    <label > Enter Last Name : </label>
+    <div>
+        <mat-form-field class="registration field" appearance="fill">
+            <input matInput placeholder="Enter last name" type="text" [(ngModel)]="user.lastname" name="lastname" formControlName="lastname">
+
+            <mat-error *ngIf="lastname?.errors?.required">
+                Last Name is required.
+            </mat-error>
+            <mat-error *ngIf="lastname?.errors?.minlength">
+                min length must be more than or equals to 2 characters.
+            </mat-error>
+            <mat-error *ngIf="lastname?.errors?.maxlength">
+                min length must be more than or equals to 2 characters.
+            </mat-error>
+            <mat-error *ngIf="lastname?.errors?.pattern">
+                last name must contains letters
+            </mat-error>
+    
+        </mat-form-field>
+        </div>
+
+        <label > Enter your EmailId : </label>
+        <div>
+            <mat-form-field class="registration field" appearance="fill">
+                <input matInput placeholder="Enter last email" type="text" [(ngModel)]="user.email" name="email" formControlName="email">
+
+                <mat-error *ngIf="email?.errors?.required">
+                    EmailId is required.
+                </mat-error>
+                <mat-error *ngIf="email?.errors?.maxlength">
+                    max length can naot exceed 30 characters.
+                </mat-error>
+                <mat-error *ngIf="email?.errors?.email">
+                    please enter valid email
+                </mat-error>
+        
+            </mat-form-field>
+        </div>
+
+        <label > Enter your mobile number : </label>
+        <div>
+            <mat-form-field class="registration field" appearance="fill">
+                <input matInput placeholder="Enter mobile number" type="text" [(ngModel)]="user.mobileno" name="mobileno" formControlName="mobileno">
+
+                <mat-error *ngIf="mobileno?.errors?.required">
+                    mobileno is required.
+                </mat-error>
+                <mat-error *ngIf="mobileno?.errors?.pattern">
+                    mobileno must start with 7/8/9
+                </mat-error>
+        
+        
+            </mat-form-field>
+        </div>
+
+        <label > Enter password: </label>
+        <div>
+            <mat-form-field class="registration field" appearance="fill">
+                <input matInput placeholder="Enter password" type="password" [(ngModel)]="user.password" name="password" formControlName="password">
+            
+                <mat-error *ngIf="password?.errors?.required">
+                    password is required.
+                </mat-error>
+                <mat-error *ngIf="firstname?.errors?.pattern">
+                    password must have uppercase,lowercase characters and must contain digit and special characters
+                </mat-error>
+        
+            </mat-form-field>
+        </div>
+        <button color="accent" mat-button mat-raised-button type="reset">Reset</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" [disabled]="!registrationForm.valid">Submmit</button>
+    </form>
+    
+  </div>
+
+  
+  <p>Form Status: {{ registrationForm.status }}</p>
+  
+  </h2>

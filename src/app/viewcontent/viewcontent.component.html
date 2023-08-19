@@ -1,0 +1,39 @@
+<br><br><h2>content details </h2>
+
+
+  <!-- <div class="usercontentview" *ngIf="fetchbyemailid()">
+  <div class="card-container" *ngFor="let i of content2">
+    <mat-card class="card-block">
+        <mat-card-header>
+          <mat-card-title>Contentid - {{i.contentid}}</mat-card-title>
+          <mat-card-title>Title - {{i.title}}</mat-card-title>
+          <mat-card-title>Contentdata - {{i.contentdata}}</mat-card-title>
+          <mat-card-title>Emailid - {{i.emailid}}</mat-card-title>
+    
+          <mat-card-actions>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="delbutton" mat-button  (click)="deleteFunction(i.contentid)">DELETE</button>
+          </mat-card-actions>
+        </mat-card-header>
+        
+      </mat-card>
+      </div>
+    </div> -->
+
+
+<div class="card-container" *ngFor="let i of content1">
+<mat-card class="card-block">
+    <mat-card-header>
+      <mat-card-title>Contentid - {{i.contentid}}</mat-card-title>
+      <mat-card-title>Title - {{i.title}}</mat-card-title>
+      <mat-card-title>Contentdata - {{i.contentdata}}</mat-card-title>
+      <!-- <mat-card-title>Emailid - {{i.emailid}}</mat-card-title> -->
+
+      <mat-card-actions>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="delbutton" mat-button  (click)="deleteFunction(i.contentid)">DELETE</button>
+      </mat-card-actions>
+    </mat-card-header>
+    
+  </mat-card>
+  </div>

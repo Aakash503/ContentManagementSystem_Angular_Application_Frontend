@@ -1,0 +1,15 @@
+<br>
+<div class="registration-container">
+<h2> <h2 style="color: whitesmoke; padding-top: 50px;"><b> ContentPage </b></h2>
+    <form (ngSubmit)="onSave(saveForm);saveForm.reset()" #saveForm="ngForm">
+        <div>contentid &nbsp;<input type="text" [(ngModel)]="content.contentid" name="contentid"> </div>
+        <div>&nbsp; &nbsp; title &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" [(ngModel)]="content.title" name="title"> </div>
+        <div>contentdata &nbsp;<input type="text" [(ngModel)]="content.contentdata" name="contentdata"> </div>
+        <div>EmailId &nbsp;<input type="text" [(ngModel)]="content.emailid" name="emailid"> </div>
+        <br>
+        <button type="submit" [disabled]="saveForm.invalid">Save</button>
+        &nbsp;
+        <button type="reset" >reset</button>
+    </form>
+</h2>
+</div>

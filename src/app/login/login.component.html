@@ -1,0 +1,29 @@
+<p>login works!</p>
+<h3>
+    <div>
+    <form [formGroup]="userForm" (submit)="loginFun();userForm.reset();">
+    <div>
+        <label for="username">Enter Username:</label>
+        <mat-form-field>
+        <input type="text"[(ngModel)] = "log.username"  placeholder="username" id="username" formControlName="username">
+    </mat-form-field>
+    </div>
+    <div>
+        <label for="password">Enter Password:</label>
+        <mat-form-field>
+        <input type="password" placeholder="password" id="password" [(ngModel)] = "log.password" formControlName="password">
+    </mat-form-field>
+    </div>
+
+    <!-- <div><button (click) = "loginFun()">Login</button> </div> -->
+    <button mat-raised-button color="primary" >login</button>
+    <button color="accent" mat-button mat-raised-button type="reset">Reset</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <br><br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <!-- <a routerLink="register"> <u> newuser </u></a> -->
+    <!-- <button color="accent" (click)="navFunction()">newuser</button> -->
+    <h4 class="loginshift" (click)="navFunction()"><u>newuser?signup</u></h4>
+</form>
+</div>
+</h3>

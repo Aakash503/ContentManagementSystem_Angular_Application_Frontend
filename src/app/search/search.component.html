@@ -1,0 +1,39 @@
+<p>search works!</p>
+
+<h3>
+ <div class="search-container">
+    <form [formGroup]="searchForm">
+        <div>
+        <mat-form-field>
+      <input type="text" placeholder=" emailid" [(ngModel)]="emailid" id="searchbyemail" name="emailid" formControlName="emailid">
+    </mat-form-field>
+   
+       </div>
+       <button mat-raised-button color="primary"(click)="fetchbyemailid(emailid)">Submmit</button>
+    </form>
+
+     &nbsp;&nbsp;
+
+      <!-- <button (click)="fetchbyemailid()">search</button><br><br><br> -->
+
+
+     
+    <h2>contentdetails</h2>
+      <div class="card-container" *ngFor="let i of content2" >
+        <mat-card class="card-block">
+            <mat-card-header>
+              <mat-card-title>Contentid-{{i.contentid}}</mat-card-title>
+              <mat-card-title>Title -{{i.title}}</mat-card-title>
+              <mat-card-title>Contentdata-{{i.contentdata}}</mat-card-title>
+              <mat-card-title>Emailid-{{i.emailid}}</mat-card-title>
+      
+            </mat-card-header>
+            
+          </mat-card>
+          </div>
+        
+
+ </div>
+
+</h3>
+
